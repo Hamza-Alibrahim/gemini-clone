@@ -1,7 +1,7 @@
+/* eslint-disable no-undef */
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const apiKey = "AIzaSyDATsnhgrrWCnMrw3x04CS7kgn87OoRPY0";
-const genAI = new GoogleGenerativeAI(apiKey);
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
